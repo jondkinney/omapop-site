@@ -32,7 +32,11 @@ test("install commands point at the real plugin and explicitly enable it", () =>
   assert.match(html, /omarchy plugin add https:\/\/github\.com\/jondkinney\/omapop\.git\nomarchy plugin enable io\.github\.jondkinney\.omapop/);
 });
 test("scripts, styles, and fonts introduce no third-party runtime requests", async () => {
-  assert.doesNotMatch(html, /<(?:script|link)[^>]*(?:src|href)="https?:\/\//);
+  for (const [tag] of html.matchAll(/<(?:script|link)\b[^>]*>/g)) {
+    // A canonical link describes the page URL; it is not a network dependency.
+    if (/rel="canonical"/.test(tag)) continue;
+    assert.doesNotMatch(tag, /(?:src|href)="(?:https?:)?\/\//);
+  }
   const script = await readFile(new URL("assets/site.js", root), "utf8");
   assert.doesNotMatch(script, /\b(?:fetch|XMLHttpRequest|WebSocket|eval)\s*\(/);
   assert.doesNotMatch(await readFile(new URL("assets/site.css", root), "utf8"), /@import|url\(\s*["']?https?:/);
