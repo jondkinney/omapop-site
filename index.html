@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#202630">
+  <title>Omapop — Select text. Take action.</title>
+  <meta name="description" content="A little action bar for your Omarchy desktop. Select text to copy, search, translate, and transform it with PopClip-compatible extensions. Free and open source.">
+  <link rel="canonical" href="https://omapop.rocks/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Omapop">
+  <meta property="og:title" content="Omapop — Select text. Take action.">
+  <meta property="og:description" content="Copy, search, translate, transform. A little action bar, right where you need it. Free and open source for Omarchy.">
+  <meta property="og:url" content="https://omapop.rocks/">
+  <meta property="og:image" content="https://omapop.rocks/assets/preview.jpg">
+  <meta property="og:image:width" content="1400">
+  <meta property="og:image:height" content="900">
+  <meta property="og:image:alt" content="Omapop's selection action bar and its real extensions panel in the Nord theme.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Omapop — Select text. Take action.">
+  <meta name="twitter:description" content="A little action bar for your Omarchy desktop. Free, open source, and yours to extend.">
+  <meta name="twitter:image" content="https://omapop.rocks/assets/preview.jpg">
+  <meta name="twitter:image:alt" content="Omapop's selection action bar and its real extensions panel in the Nord theme.">
+  <link rel="icon" type="image/svg+xml" href="assets/omapop.svg">
+  <link rel="stylesheet" href="assets/site.css">
+  <script type="module" src="assets/site.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="container nav" aria-label="Main navigation">
+      <a class="brand" href="#" aria-label="Omapop home"><img src="assets/omapop.svg" alt="" width="30" height="30">omapop<span class="brand-period">.</span></a>
+      <div class="nav-links"><a href="#features">The little things</a><a href="#extensions">Extensions</a><a href="#install">Install</a></div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch theme" hidden><span aria-hidden="true">◐</span></button>
+        <a class="github-link" href="https://github.com/jondkinney/omapop">GitHub <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> A little more flow. For Omarchy.</p>
+        <h1 id="hero-title">Select text.<br><span class="highlight-word">Take action.</span></h1>
+        <p class="hero-description">The next thing you need to do, right next to the text you just selected. Copy, search, translate, transform. Then get on with your day.</p>
+        <div class="hero-actions"><a class="button primary" href="#install">Get Omapop <span aria-hidden="true">↓</span></a><a class="text-link" href="https://github.com/jondkinney/omapop">Explore the source <span aria-hidden="true">↗</span></a></div>
+        <p class="hero-note">Free &amp; open source <span aria-hidden="true">/</span> Made for your Linux desktop</p>
+      </div>
+
+      <div class="demo-wrap">
+        <div class="demo-label"><span class="mini-cross" aria-hidden="true">+</span> SMALL BAR. BIG SHORTCUT.</div>
+        <div class="demo" id="demo">
+          <div class="demo-titlebar"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>something worth selecting.txt</span><span class="document-mark" aria-hidden="true">≡</span></div>
+          <div class="demo-body">
+            <p class="demo-prelude"><span aria-hidden="true">01</span> An idea. A sentence. A tiny task.</p>
+            <fieldset class="action-bar" id="demo-controls" disabled aria-label="Try an Omapop action">
+              <button type="button" data-action="copy" title="Copy the selected text"><span class="copy-symbol" aria-hidden="true"></span><span>Copy</span></button>
+              <span class="action-divider" aria-hidden="true"></span>
+              <button type="button" data-action="uppercase" title="Make uppercase" aria-label="Make uppercase"><span class="letter-icon" aria-hidden="true">AB</span></button>
+              <button type="button" data-action="lowercase" title="Make lowercase" aria-label="Make lowercase"><span class="letter-icon" aria-hidden="true">ab</span></button>
+              <button type="button" data-action="underscore" title="Replace spaces with underscores" aria-label="Replace spaces with underscores"><span class="underscore-icon" aria-hidden="true">_</span></button>
+              <button type="button" data-action="count" title="Count words" aria-label="Count words"><span class="count-icon" aria-hidden="true">WC</span></button>
+            </fieldset>
+            <label class="sr-only" for="demo-text">Try your own text in the interactive demo</label>
+            <div class="editor-line"><span class="line-number" aria-hidden="true">02</span><textarea id="demo-text" rows="2" maxlength="2000" spellcheck="false">make it your own</textarea></div>
+            <p class="demo-after"><span aria-hidden="true">03</span> A little less getting in your own way.</p>
+          </div>
+          <div class="demo-footer"><p id="demo-status" role="status" aria-live="polite">Try an action above. Or type your own text.</p><button id="demo-reset" type="button" aria-label="Reset the demo" title="Reset the demo" hidden>↺</button></div>
+        </div>
+        <p class="demo-caption"><span aria-hidden="true">↑</span> A hands-on web demo. The real thing lives on your desktop.</p>
+        <noscript><p class="demo-caption">Enable JavaScript to try the demo. Omapop itself is a desktop plugin.</p></noscript>
+      </div>
+    </section>
+
+    <div class="principles container" aria-label="At a glance"><span>Native to Omarchy</span><span>PopClip-compatible extensions</span><span>MIT licensed</span><span>No account required</span></div>
+
+    <section class="section container" id="features" aria-labelledby="features-title">
+      <div class="section-heading"><p class="eyebrow">LESS FRICTION. MORE DOING.</p><h2 id="features-title">For all those<br>“just let me…” moments.</h2><p>Little tasks shouldn’t take you out of your flow.<br>Omapop brings the useful bits to you.</p></div>
+      <div class="feature-grid">
+        <article class="feature"><span class="feature-number">01 / THE EVERYDAY</span><h3>Copy. Search. Done.</h3><p>Drag to select, double-click a word, or triple-click a line. Cut, copy, paste, and search are a click away, with actions that fit the selection and app.</p><div class="feature-example"><span class="selected-text">that thing you were reading</span><span class="example-arrow" aria-hidden="true">↗</span></div></article>
+        <article class="feature"><span class="feature-number">02 / THE NEXT STEP</span><h3>Text that takes you places.</h3><p>Select a URL to open it. Select a file path to reveal it in your file manager. The bar knows when there’s more to your text than words.</p><div class="feature-example"><code>~/Projects/a-good-idea</code><span class="example-arrow" aria-hidden="true">↗</span></div></article>
+        <article class="feature"><span class="feature-number">03 / THE QUICK FIX</span><h3>A sentence, sorted.</h3><p>Make it uppercase. Count the words. Join the lines. Look it up on Wikipedia. Add extensions for the small jobs you do again and again.</p><div class="feature-example"><span>make it yours</span><span class="example-arrow" aria-hidden="true">→</span><code>MAKE IT YOURS</code></div></article>
+      </div>
+    </section>
+
+    <section class="extensions-section" id="extensions" aria-labelledby="extensions-title">
+      <div class="container extensions-layout">
+        <div class="extensions-copy">
+          <p class="eyebrow">YOUR ACTIONS. YOUR WAY.</p>
+          <h2 id="extensions-title">A tiny bar.<br>Room to make it yours.</h2>
+          <p class="section-lead">Browse the PopClip Extensions Directory right from Omapop. Find an action, install it, and put it to work.</p>
+          <ul class="extension-benefits">
+            <li><span aria-hidden="true">+</span><div><h3>Good things already built in</h3><p>Word Count, Wikipedia, Uppercase, and Reverse ship as examples you can use and learn from.</p></div></li>
+            <li><span aria-hidden="true">+</span><div><h3>Options right where they belong</h3><p>Toggle actions on and off and expand an extension’s settings in place. No hunting through config files.</p></div></li>
+            <li><span aria-hidden="true">+</span><div><h3>A shortcut to your own shortcuts</h3><p>Write a YAML snippet, a shell script, or a JavaScript action. Your workflow doesn’t have to fit someone else’s menu.</p></div></li>
+          </ul>
+          <a class="text-link" href="https://github.com/jondkinney/omapop#extensions">Meet the extension system <span aria-hidden="true">↗</span></a>
+          <p class="compatibility-note">Compatible doesn’t mean every extension: AppleScript and macOS Services need a Mac, and app-specific actions need their target app. Omapop is an independent project, not affiliated with PopClip.</p>
+        </div>
+        <figure class="panel-figure"><div class="panel-heading"><span class="status-dot" aria-hidden="true"></span> THE REAL THING</div><img src="assets/extensions-panel.png" alt="Omapop's extensions panel, with toggles, inline settings controls, and a searchable extension catalogue." width="400" height="855" loading="lazy" decoding="async"><figcaption>Live Omapop panel · Nord theme</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section container fits-section" aria-labelledby="fits-title">
+      <div><p class="eyebrow">A GOOD DESKTOP CITIZEN</p><h2 id="fits-title">There when you need it.<br>Gone when you don’t.</h2></div>
+      <div class="fits-grid">
+        <article><span class="key-symbol" aria-hidden="true">Esc</span><h3>Never in the way</h3><p>Click elsewhere, start typing, or change windows and the bar disappears. Hold Super while selecting to keep it away.</p></article>
+        <article><span class="key-symbol" aria-hidden="true">⌨</span><h3>Mouse first. Keys welcome.</h3><p>Set your own shortcut, navigate with arrow keys, and press Enter to act. Long-press to bring up actions without selecting text.</p></article>
+        <article><span class="key-symbol" aria-hidden="true">◐</span><h3>Looks like it belongs</h3><p>The real bar follows your Omarchy theme. Tune its position, choose a search engine, and exclude the apps where you don’t need it.</p></article>
+      </div>
+    </section>
+
+    <section class="install-section container" id="install" aria-labelledby="install-title">
+      <div class="install-intro"><p class="eyebrow">TWO COMMANDS. THEN JUST SELECT.</p><h2 id="install-title">Put a little pop<br>in your desktop.</h2><p>Install the plugin, enable it, and select some text.<br>That’s your new shortcut.</p><a class="text-link" href="https://github.com/jondkinney/omapop#install">Read the installation guide <span aria-hidden="true">↗</span></a></div>
+      <div class="install-details">
+        <div class="terminal"><div class="terminal-title"><span>YOUR TERMINAL</span><button class="copy-install" id="copy-install" type="button" hidden>Copy commands</button></div><pre><code id="install-commands">omarchy plugin add https://github.com/jondkinney/omapop.git
+omarchy plugin enable io.github.jondkinney.omapop</code></pre><p class="install-status" id="install-status" role="status" aria-live="polite">Installed disabled, so you can review it before enabling.</p></div>
+        <p class="requirements">For Omarchy with Hyprland 0.56+ and Quickshell. Uses Omarchy’s standard clipboard and Python helpers. JavaScript extensions also need Deno or Node.js. <a href="https://github.com/jondkinney/omapop#install">Full requirements ↗</a></p>
+      </div>
+    </section>
+
+    <section class="section container faq-section" aria-labelledby="faq-title">
+      <div><p class="eyebrow">A FEW GOOD QUESTIONS</p><h2 id="faq-title">Before you pop in.</h2></div>
+      <div class="faq-list">
+        <details><summary>Is this PopClip for Linux?</summary><p>It’s an independent, open-source selection-action tool for Omarchy, inspired by the same idea. Omapop supports the PopClip extension format, but it isn’t made by or affiliated with PopClip. Mac-only actions won’t run on Linux.</p></details>
+        <details><summary>Does it work in every app?</summary><p>Omapop uses Wayland’s primary selection. It works in apps that expose their selected text that way. Some terminal apps handle selection themselves; in Foot, holding Shift while dragging lets the terminal select it instead. Cut and text-replacing actions are only offered where editing is supported.</p></details>
+        <details><summary>What happens to my selected text?</summary><p>The core selection handling runs locally. Search and URL actions send the relevant text to the service you choose. Third-party extensions can run code and contact outside services, so review their source and only install ones you trust.</p></details>
+        <details><summary>Can I use it outside Omarchy?</summary><p>Omapop is currently an Omarchy Shell plugin, using Quickshell and Hyprland’s Lua API. It isn’t a standalone app for other Linux desktops, macOS, or Windows.</p></details>
+        <details><summary>Free as in…?</summary><p>Free to use, inspect, change, and share under the MIT license. No Omapop account, subscription, or license key. External services used by extensions may have their own accounts or pricing.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container"><div class="footer-top"><a class="brand" href="#"><img src="assets/omapop.svg" alt="" width="27" height="27">omapop<span class="brand-period">.</span></a><p>A little action goes a long way.</p><div><a href="https://github.com/jondkinney/omapop">Source</a><a href="https://github.com/jondkinney/omapop/issues">Feedback</a><a href="https://github.com/jondkinney/omapop/blob/main/LICENSE">MIT license</a></div></div><div class="footer-bottom"><p>Made by <a href="https://github.com/jondkinney">Jon Kinney</a>.</p><p>More little tools: <a href="https://usevernier.com">Vernier</a><a href="https://mousehop.com">Mousehop</a><a href="https://tensaku.dev">Tensaku</a></p></div></footer>
+</body>
+</html>
